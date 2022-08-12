@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Page2 from "./components/Page2/Page2";
 import Station from "./components/Station/Station";
 import Feedback from "./components/Feedback/Feedback";
+import FeedbackStudent from "./components/FeedbackStudent/FeedbackStudent";
 import "./App.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,6 +15,7 @@ import axios from "axios";
 // axios.defaults.baseURL = "http://localhost:7777/app/";
 
 const App = () => {
+
   return (
     <div>
       <Navbar />
@@ -23,9 +25,9 @@ const App = () => {
           <Route path="redirect" element={<Redirect />} />
           <Route path="station" element={<Station />} />
           <Route path="feedback" element={<Feedback />} />
+          <Route path="/feedback_student" element={<FeedbackStudent />} />
         </Routes>
       </BrowserRouter>
-
       <Footer />
     </div>
   );

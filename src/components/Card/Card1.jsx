@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 const Card = (props) => {
     console.log(props)
     return (
-        <div className='demo'>
+        <div className='demo style-demo'>
             <div>
                 <div className="uk-card uk-card-default uk-card-hover uk-card-body p-5">
                     <h3 className="uk-card-title">Login/Signup</h3>

@@ -6,10 +6,10 @@ import CaptchaC from "../CaptchaC";
 import Button from "@mui/material/Button";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { createHashHistory } from 'history'
+// import { createHashHistory } from 'history'
 
 const Card2 = (props) => {
-  const history = createHashHistory();
+  // const history = createHashHistory();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [otp,setotp] = useState("");
@@ -34,16 +34,21 @@ const Card2 = (props) => {
   };
 
   function verify_otp(){
-    let text = data1;
+    if(otp.length!=6){
+      console.log("Enter 6 digit OTP")
+    }else{
+      let text = data1;
     console.log(data1);
     let result = text.slice(7,13);
     console.log(result);
     console.log(otp);
-    if(otp === result){console.log("success");history.push("/station")} else{console.log("failure")}
+    if(otp === result){console.log("success")} else{console.log("failure")}
+    }
+    
     
   }
   return (
-    <div className="demo">
+    <div className="demo style-demo">
       <div>
         <div className="uk-card uk-card-default uk-card-hover uk-card-body p-5">
           <h3 className="uk-card-title">Enter Username/Email</h3>
@@ -87,7 +92,7 @@ const Card2 = (props) => {
                   }}
                 />
                 <button
-                  class="btn btn-outline-secondary"
+                  class="btn btn-outline-secondary send"
                   type="button"
                   id="button-addon2"
                   onClick={() => {
@@ -97,7 +102,7 @@ const Card2 = (props) => {
                   Send OTP
                 </button>
                 <button
-                  class="btn btn-outline-secondary"
+                  class="btn btn-outline-secondary verify"
                   type="button"
                   id="button-addon2"
                   onClick={()=>{

@@ -9,7 +9,7 @@ const Station = () => {
         <div>
             {/* <img src="https://images.indianexpress.com/2022/07/chennai-metro.jpeg"></img> */}
             <div>
-            <img src="https://images.indianexpress.com/2022/07/chennai-metro.jpeg" class="chennaimetro"/>
+            <img src="https://chennaimetrorail.org/wp-content/uploads/2021/03/cmrl-banner-53217.png" class="chennaimetro"/>
             </div>
             <h2 class="main">Select Station</h2>
             <select class="form-control  main" id="station-from">

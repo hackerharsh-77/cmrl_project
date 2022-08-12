@@ -41,3 +41,6 @@ div{
 .msg{
     margin-top:50px;
 }
+.uk-card-title{
+    text-transform: uppercase;
+}
