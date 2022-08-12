@@ -5,10 +5,15 @@ import "./Card2.css";
 import CaptchaC from "../CaptchaC";
 import Button from "@mui/material/Button";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { createHashHistory } from 'history'
 
-const Card2 = () => {
+const Card2 = (props) => {
+  const history = createHashHistory();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [otp,setotp] = useState("");
+  const [data1,setData1] = useState("");
   const [msg, setmsg] = useState(false);
 
   const call = async () => {
@@ -18,7 +23,8 @@ const Card2 = () => {
         email: `${email}`,
       })
       .then(function (response) {
-        console.log(response);
+        setData1(response.data);
+        console.log(response.data);
         return response;
       })
       .catch(function (error) {
@@ -27,6 +33,15 @@ const Card2 = () => {
       });
   };
 
+  function verify_otp(){
+    let text = data1;
+    console.log(data1);
+    let result = text.slice(7,13);
+    console.log(result);
+    console.log(otp);
+    if(otp === result){console.log("success");history.push("/station")} else{console.log("failure")}
+    
+  }
   return (
     <div className="demo">
       <div>
@@ -67,6 +82,9 @@ const Card2 = () => {
                   placeholder="Enter OTP"
                   aria-label=""
                   aria-describedby="button-addon2"
+                  onChange={(e)=>{
+                    setotp(e.target.value);
+                  }}
                 />
                 <button
                   class="btn btn-outline-secondary"
@@ -82,14 +100,19 @@ const Card2 = () => {
                   class="btn btn-outline-secondary"
                   type="button"
                   id="button-addon2"
+                  onClick={()=>{
+                    verify_otp();
+                  }}
                 >
                   Verify OTP
                 </button>
               </div>{" "}
               <br />
-              <div className="submit">
-                <Button variant="contained">Submit</Button>
-              </div>
+              <Link to="/redirect">
+                <div className="submit">
+                  <Button variant="contained">Submit</Button>
+                </div>
+              </Link>
             </div>
           </form>
           {/* <CaptchaC/> */}
@@ -100,3 +123,4 @@ const Card2 = () => {
 };
 
 export default Card2;
+

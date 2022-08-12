@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Station.css'
 import Button from '@mui/material/Button'
+import { Link } from "react-router-dom";
 
 const Station = () => {
     return(
@@ -139,9 +140,9 @@ const Station = () => {
                     Wimco Nagar Metro
                 </option>
             </select>
-           
+            <Link to="/feedback">
                 <Button variant="contained">Submit</Button>
-         
+            </Link>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
+import Redirect from "./components/Redirect/Redirect";
 import Footer from "./components/Footer/Footer";
 import Page2 from "./components/Page2/Page2";
 import Station from "./components/Station/Station";
@@ -19,7 +20,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="page2" element={<Page2 />} />
+          <Route path="redirect" element={<Redirect />} />
           <Route path="station" element={<Station />} />
           <Route path="feedback" element={<Feedback />} />
         </Routes>
