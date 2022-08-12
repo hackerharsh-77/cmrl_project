@@ -7,6 +7,9 @@ import Station from './components/Station/Station'
 import Feedback from './components/Feedback/Feedback'
 import "./App.css"
 
+import axios from 'axios'
+// axios.defaults.baseURL = "http://localhost:7777/app/";
+
 const App = () => {
     return (
         <div >
@@ -14,7 +17,8 @@ const App = () => {
             {/* <Home/> */}
             {/* <Page2 /> */}
             {/* <Station /> */}
-            <Feedback />
+            {<Feedback />}
+            {<Home/>}
             <Footer />
             
         </div>
