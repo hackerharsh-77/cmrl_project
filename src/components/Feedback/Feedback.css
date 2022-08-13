@@ -50,6 +50,12 @@
 
 .b{
     font-weight: bold;
+    text-decoration: underline;
+}
+
+input[type="radio"] {
+    /* margin-right: 1rem; */
+    margin: 0.5rem;
 }
 
 .size{
