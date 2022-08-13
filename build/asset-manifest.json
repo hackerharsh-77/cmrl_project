@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cmrl_project/static/css/main.d51d4741.css",
+    "main.js": "/cmrl_project/static/js/main.106965cf.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/cmrl_project/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/cmrl_project/index.html",
+    "main.d51d4741.css.map": "/cmrl_project/static/css/main.d51d4741.css.map",
+    "main.106965cf.js.map": "/cmrl_project/static/js/main.106965cf.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/cmrl_project/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d51d4741.css",
+    "static/js/main.106965cf.js"
+  ]
+}

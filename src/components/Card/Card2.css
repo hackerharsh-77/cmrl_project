@@ -1,0 +1,48 @@
+.cred{
+    margin-bottom: 25px
+}
+
+.email, .password, .captcha{
+    margin:6px;
+    padding: 4px 4px;
+}
+
+.password{
+    margin-left:8px;
+}
+
+.captcha{
+    margin-left:13px;
+}
+
+
+
+.captcha-img{
+    margin-top:1px;   
+    width:35%;
+}
+
+.submit{
+    margin-top:3px;
+}
+.justify-content-center label{
+     font-weight: 600;
+}
+.style-demo{
+    height:500px;
+    width:500px;  
+}
+.send{
+    background-color: aliceblue;
+}
+.verify{
+    background-color: aliceblue;
+}
+
+
+/* .button, .input, .optgroup, .select, .textarea {
+    margin: 14px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+} */
