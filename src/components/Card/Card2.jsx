@@ -44,8 +44,6 @@ const Card2 = (props) => {
     console.log(otp);
     if(otp === result){console.log("success")} else{console.log("failure")}
     }
-    
-    
   }
   return (
     <div className="demo style-demo">

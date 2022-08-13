@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Feedback.css'
 import Button from '@mui/material/Button'
+import { selectClasses } from '@mui/material';
+
+
+
 
 const Feedback = () => {
+    
+    function seemsg(e){
+        console.log(e);
+    }
+    
+
     return(
         
         <div class="main-container">
@@ -21,8 +31,8 @@ const Feedback = () => {
                         </div>
                         <div class="gender">
                             <label className="b">Gender</label>
-                            <input type='radio' name="gender"/><label>Male</label>
-                            <input type='radio' name="gender"/><label>Female</label>
+                            <input type='radio' name="gender" onChange={(e)=>{seemsg(e.target.value);}}/><label>Male</label>
+                            <input type='radio' name="gender" onChange={(e)=>{seemsg(e.target.value);}}/><label>Female</label>
                         </div>
                         <div class="name">
                             <label className="b">Mobile Number</label>
