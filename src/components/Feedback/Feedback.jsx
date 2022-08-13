@@ -26,7 +26,7 @@ const Feedback = () => {
 
     const call = async()=>{
         
-        const response = await axios.post('http://localhost:7777/app/feedback', {
+        const response = await axios.post('https://young-sierra-93895.herokuapp.com/app/feedback', {
             username: name,
             gender: gender,
             mobile: mobile,

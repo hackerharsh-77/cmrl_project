@@ -26,7 +26,7 @@ const Card2 = (props) => {
   const call = async () => {
     setmsg(true);
     const response = await axios
-      .post("http://localhost:7777/app/verify", {
+      .post("https://young-sierra-93895.herokuapp.com/app/verify", {
         email: `${email}`,
       })
       .then(function (response) {
