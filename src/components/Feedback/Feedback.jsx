@@ -4,6 +4,7 @@ import './Feedback.css'
 import Button from '@mui/material/Button'
 import { selectClasses } from '@mui/material';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -24,6 +25,7 @@ const Feedback = () => {
     const [otherSuggestion,setotherSuggestion] = useState("");
 
     const call = async()=>{
+        
         const response = await axios.post('http://localhost:7777/app/feedback', {
             username: name,
             gender: gender,
@@ -153,10 +155,11 @@ const Feedback = () => {
                             <label className="b">If no, Suggestion for improvement:</label>
                             <textarea onChange={(e)=>{setotherSuggestion(e.target.value)}} type="textarea" class="size suggestion" placeholder="Other suggestions if any..."/>
                         </div>
-
+                            <Link to="/thankYou">
                             <div className="submit">
                                 <Button onClick={()=>{call()}} class="btn btn-primary button-submit-feedback">Submit</Button>
                             </div>
+                            </Link>
                         </div>
                     </form>
                     {/* <CaptchaC/> */}

@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const Card2 = (props) => {
   const navigate = useNavigate();
   const navigateHome = () => {
-    navigate('/station');
+    navigate('/redirect');
   };
   // const history = createHashHistory();
   const [email, setemail] = useState("");
@@ -77,7 +77,7 @@ const Card2 = (props) => {
                 placeholder="enter username/email"
               ></input>
               <br />
-              <label>Password</label>
+              {/* <label>Password</label>
               <input
                 onChange={(e) => {
                   setpassword(e.target.value);
@@ -85,7 +85,7 @@ const Card2 = (props) => {
                 class="password"
                 type="password"
                 placeholder="Password"
-              ></input>{" "}
+              ></input>{" "} */}
               <br />
               {msg && <p style={{ color: "red" }}>OTP has been sent</p>}
               <br />
@@ -134,6 +134,7 @@ const Card2 = (props) => {
                   Submit
                 </Button>
               </div>
+              
             </div>
           </form>
           {/* <CaptchaC/> */}
