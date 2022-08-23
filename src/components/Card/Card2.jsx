@@ -9,8 +9,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 // import navigateHome from "../../App.js";
 // import { createHashHistory } from 'history'
+import { useCookies } from 'react-cookie';
 
 const Card2 = (props) => {
+  const [cookies, setCookie] = useCookies(['name']);
   const navigate = useNavigate();
   const navigateHome = () => {
     navigate('/redirect');
@@ -22,6 +24,7 @@ const Card2 = (props) => {
   const [data1, setData1] = useState("");
   const [msg, setmsg] = useState(false);
   const [otpMsg,setOtpMsg] = useState(true);
+
 
   const call = async () => {
     setmsg(true);
@@ -52,6 +55,7 @@ const Card2 = (props) => {
       if (otp === result) {
         // console.log("success");
         setOtpMsg(false);
+        setCookie('logged_in', "true", { path: '/' });
 
       } else {
         // console.log("failure");

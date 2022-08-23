@@ -5,8 +5,20 @@ import Card1 from '../Card/Card1'
 import CardPassenger from '../Card/CardPassenger'
 import Card2 from '../Card/Card2'
 import CardStudent from '../Card/CardStudent'
+import { useCookies } from 'react-cookie';
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 const Redirect = () => {
+const navigate = useNavigate();
+
+    const [cookies, setCookie] = useCookies(['name']);
+    console.log("cookies",cookies.logged_in);
+    if(cookies.logged_in === "true") {
+
+    }else{
+        navigate("/")
+    }
+
 
 
     return (
