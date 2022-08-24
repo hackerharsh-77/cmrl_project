@@ -8,6 +8,8 @@ import Station from "./components/Station/Station";
 // import ThankYou from "./components/ThankYou/ThankYou";
 import Feedback from "./components/Feedback/Feedback";
 import FeedbackStudent from "./components/FeedbackStudent/FeedbackStudent";
+
+import Dash from "./components/Dash/Dash";
 import "./App.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route,HashRouter  } from "react-router-dom";
@@ -24,7 +26,7 @@ const App = () => {
     <div>
       <Navbar />
 
-      <HashRouter >
+{      <HashRouter >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="redirect" element={<Redirect />} />
@@ -32,8 +34,10 @@ const App = () => {
           <Route path="feedback" element={<Feedback />} />
           <Route path="/feedback_student" element={<FeedbackStudent />} />
           <Route path="/thankYou" element={<ThankYou />} />
+          <Route path="/admin" element={<Dash />} />
         </Routes>
-      </HashRouter>
+      </HashRouter>}
+      {/* <Dash /> */}
       <Footer />
     </div>
   );

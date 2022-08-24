@@ -2,9 +2,21 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Station.css'
 import Button from '@mui/material/Button'
+import { useCookies } from 'react-cookie';
 import { Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 const Station = () => {
+    const navigate = useNavigate();
+    const [cookies, setCookie] = useCookies(['name']);
+    console.log("cookies",cookies.logged_in);
+    if(cookies.logged_in === "true") {
+
+    }else{
+        navigate("/")
+    }
+
+
     return(
         <div>
             {/* <img src="https://images.indianexpress.com/2022/07/chennai-metro.jpeg"></img> */}

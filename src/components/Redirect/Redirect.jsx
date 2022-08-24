@@ -18,19 +18,16 @@ const navigate = useNavigate();
     }else{
         navigate("/")
     }
-
-
-
     return (
         <body>
             <div id="main">
                 <div className="container p-3">
                     <div className="row">
                         <div className="col-lg-6 mt-5">
-                            <CardPassenger/>
+                            <CardPassenger text={"Passenger Feedback"}/>
                         </div>
                         <div className="col-lg-6 mt-5">
-                            <CardStudent />
+                            <CardStudent text={"Training session feedback"}/>
                         </div>
                     </div>
                 </div>

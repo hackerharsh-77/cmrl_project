@@ -82,3 +82,31 @@
     display: flex;
     margin-top:2px;
 }
+
+.feedback{
+    background-color: rgb(166, 166, 246);
+    border-radius: 2%;
+    margin-right:3rem;
+}
+
+.bg-card{
+    background-color: #DDE8FC;
+    padding: 1rem;
+    border: 2px hidden grey;
+    margin-left:20px;
+    margin-right:20px;
+    /* border-radius:2%; */
+    
+}
+
+.name:hover{
+    border: 0.5rem solid white;
+    transition: 0.5s;
+    /* box-shadow: 3px 10px black; */
+    /* transition: all 0.2s ease-in-out; */
+}
+
+.gender:hover {
+    border: 0.5rem solid white;
+    transition: 0.5s;
+}
