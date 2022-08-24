@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Station.css'
 import Button from '@mui/material/Button'
@@ -10,11 +10,15 @@ const Station = () => {
     const navigate = useNavigate();
     const [cookies, setCookie] = useCookies(['name']);
     console.log("cookies",cookies.logged_in);
-    if(cookies.logged_in === "true") {
+    useEffect(()=>{
+        if(cookies.logged_in === "true") {
+            console.log("User logged in")
+        }else{
+            navigate("/")
+        }
 
-    }else{
-        navigate("/")
-    }
+    } ,[])
+    const [stations,setstation] = useState('')
 
 
     return(
@@ -24,135 +28,135 @@ const Station = () => {
             <img src="https://chennaimetrorail.org/wp-content/uploads/2021/03/cmrl-banner-53217.png" class="chennaimetro"/>
             </div>
             <h2 class="main">Select Station</h2>
-            <select class="form-control  main" id="station-from">
+            <select required="required" onChange={(e)=>{setstation(e.target.value)}} class="form-control  main" id="station-from">
                 <option value="">
                     - Select -
                 </option>
-                <option value="108">
+                <option value="AG - DMS">
                     AG - DMS
                 </option>
-                <option value="117">
+                <option value="Airport">
                     Airport
                 </option>
-                <option value="207">
+                <option value="Anna Nagar East">
                     Anna Nagar East
                 </option>
-                <option value="208">
+                <option value="Anna Nagar Tower">
                     Anna Nagar Tower
                 </option>
-                <option value="114">
+                <option value="Arignar Anna Alandur">
                     Arignar Anna Alandur
                 </option>
-                <option value="212">
+                <option value="Arumbakkam">
                     Arumbakkam
                 </option>
-                <option value="214">
+                <option value="Ashok Nagar">
                     Ashok Nagar
                 </option>
-                <option value="202">
+                <option value="Egmore Metro">
                     Egmore Metro
                 </option>
-                <option value="215">
+                <option value="Ekkattuthangal">
                     Ekkattuthangal
                 </option>
-                <option value="105">
+                <option value="Government Estate">
                     Government Estate
                 </option>
-                <option value="113">
+                <option value="Guindy">
                     Guindy
                 </option>
-                <option value="103">
+                <option value="High Court">
                     High Court
                 </option>
-                <option value="145">
+                <option value="Kaladipet Metro">
                     Kaladipet Metro
                 </option>
-                <option value="204">
+                <option value="Kilpauk">
                     Kilpauk
                 </option>
-                <option value="210">
+                <option value="Koyambedu">
                     Koyambedu
                 </option>
-                <option value="106">
+                <option value="LIC">
                     LIC
                 </option>
-                <option value="112">
+                <option value="Little Mount">
                     Little Mount
                 </option>
-                <option value="102">
+                <option value="Mannadi">
                     Mannadi
                 </option>
-                <option value="116">
+                <option value="Meenambakkam">
                     Meenambakkam
                 </option>
-                <option value="110">
+                <option value="Nandanam">
                     Nandanam
                 </option>
-                <option value="115">
+                <option value="Nanganallur">
                     Nanganallur
                 </option>
-                <option value="203">
+                <option value="Nehru Park">
                     Nehru Park
                 </option>
-                <option value="147">
+                <option value="New Washermenpet Metro">
                     New Washermenpet Metro
                 </option>
-                <option value="205">
+                <option value="Pachaiyappa">
                     Pachaiyappa
                 </option>
-                <option value="104">
+                <option value="Puratchi Thalaivar Dr.M.G.Ramachandran Central Metro">
                     Puratchi Thalaivar Dr.M.G.Ramachandran Central Metro
                 </option>
-                <option value="211">
+                <option value="Puratchi Thalaivi Dr.J.Jayalaithaa CMBT Metro">
                     Puratchi Thalaivi Dr.J.Jayalaithaa CMBT Metro
                 </option>
-                <option value="111">
+                <option value="Saidapet Metro">
                     Saidapet Metro
                 </option>
-                <option value="206">
+                <option value="Shenoy Nagar">
                     Shenoy Nagar
                 </option>
-                <option value="217">
+                <option value="St. Thomas Mount">
                     St. Thomas Mount
                 </option>
-                <option value="109">
+                <option value="Teynampet">
                     Teynampet
                 </option>
-                <option value="209">
+                <option value="Thirumangalam">
                     Thirumangalam
                 </option>
-                <option value="143">
+                <option value="Thiruvotriyur Metro">
                     Thiruvotriyur Metro
                 </option>
-                <option value="144">
+                <option value="Thiruvottriyur Theradi Metro">
                     Thiruvottriyur Theradi Metro
                 </option>
-                <option value="149">
+                <option value="Thiyagaraya College Metro">
                     Thiyagaraya College Metro
                 </option>
-                <option value="107">
+                <option value="Thousand Light">
                     Thousand Light
                 </option>
-                <option value="146">
+                <option value="Tollgate Metro">
                     Tollgate Metro
                 </option>
-                <option value="148">
+                <option value="Tondiarpet Metro">
                     Tondiarpet Metro
                 </option>
-                <option value="213">
+                <option value="Vadapalani">
                     Vadapalani
                 </option>
-                <option value="101">
+                <option value="Washermenpet">
                     Washermenpet
                 </option>
-                <option value="141">
+                <option value="Wimco Nagar Depot Station">
                     Wimco Nagar Depot Station
                 </option>
-                <option value="142">
+                <option value="Wimco Nagar Metro">
                     Wimco Nagar Metro
                 </option>
             </select>
-            <Link to="/feedback">
+            <Link to={`/feedback?station=${stations}`}>
                 <Button variant="contained">Submit</Button>
             </Link>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './FeedbackStudent.css'
 import Button from '@mui/material/Button';
@@ -10,11 +10,14 @@ const FeedbackStudent= ()=>{
     const navigate = useNavigate();
     const [cookies, setCookie] = useCookies(['name']);
     console.log("cookies",cookies.logged_in);
-    if(cookies.logged_in === "true") {
-  
-    }else{
-        navigate("/")
-    }
+    useEffect(()=>{
+        if(cookies.logged_in === "true") {
+            console.log("User logged in")
+        }else{
+            navigate("/")
+        }
+
+    } ,[])
     return(
         <div class="main-container">
              <div className='demo'>

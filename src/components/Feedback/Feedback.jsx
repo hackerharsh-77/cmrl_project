@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Feedback.css'
 import Button from '@mui/material/Button'
 import { selectClasses } from '@mui/material';
 import axios from "axios";
 import { useCookies } from 'react-cookie';
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route, useNavigate ,useSearchParams} from "react-router-dom";
 
 
 
@@ -28,11 +27,23 @@ const Feedback = () => {
     const [otherSuggestion,setotherSuggestion] = useState("");
 
     const [cookies, setCookie] = useCookies(['name']);
-    console.log("cookies",cookies.logged_in);
-    if(cookies.logged_in === "true") {
-    }else{
-        navigate("/")
-    }
+
+
+
+
+    // console.log("cookies",cookies.logged_in);
+    useEffect(()=>{
+        if(cookies.logged_in === "true") {
+            console.log("User logged in")
+        }else{
+            navigate("/")
+        }
+
+    } ,[])
+
+
+    const [searchParams] = useSearchParams();
+    // console.log(searchParams.get("station"));
 
     const call = async()=>{
         const response =  axios.post('https://young-sierra-93895.herokuapp.com/app/feedback', {
@@ -74,6 +85,7 @@ const Feedback = () => {
                 <div>
                 <div className="">
                     <h3 className="uk-card-title">Commuters Survey</h3>
+                    <h5>Station : {searchParams.get("station")}</h5>
                     {/* form page */} 
                     <form class="form">
                     

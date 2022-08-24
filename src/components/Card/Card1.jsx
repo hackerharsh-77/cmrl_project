@@ -15,10 +15,10 @@ const Card = (props) => {
                     <p class="msg">Login through your Mobile number or via username and password by selecing the option below.</p>
                     <div className="row">
                         <div className="col-md-6 mobile_button">
-                            <Button onClick={()=>{props.toggleBool()}} variant="contained">Mobile</Button>
+                            <Button onClick={()=>{props.toggleBool()}} variant="contained">Admin</Button>
                         </div>
                         <div className="col-md-6 username_button">
-                            <Button onClick={()=>{props.toggleBool()}} variant="outlined">Username</Button>
+                            <Button onClick={()=>{props.toggleBool()}} variant="outlined">User</Button>
                         </div>
                     </div>
                     {/* <CaptchaC/> */}

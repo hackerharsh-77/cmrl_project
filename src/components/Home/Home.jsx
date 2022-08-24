@@ -16,10 +16,10 @@ const Home = (props) => {
             <div id="main">
                 <div className="container p-3">
                     <div className="row">
-                        <div className="col-lg-6 mt-5">
+                        <div className="col-sm-6 mt-5">
                             <Card1 toggleBool={()=>{toggleBool()}}/>
                         </div>
-                        <div className="col-lg-6 mt-5">
+                        <div className="col-sm-6 mt-5">
                             {myBool ? <Card2 /> : <Card/>}
                             {/* <Card2 /> */}
                         </div>

@@ -67,18 +67,18 @@ const Card2 = (props) => {
     <div className="demo style-demo">
       <div>
         <div className="uk-card uk-card-default uk-card-hover uk-card-body p-5">
-          <h3 className="uk-card-title">Enter Username/Email</h3>
+          <h3 className="uk-card-title">Enter Email</h3>
           {/* form page */}
           <form>
             <div class=" justify-content-center">
-              <label>Username</label>
+              <label class="email-main">User Email</label>
               <input
                 onChange={(e) => {
                   setemail(e.target.value);
                 }}
-                class="email"
+                class="email-main2"
                 type="email"
-                placeholder="enter username/email"
+                placeholder="enter email"
               ></input>
               <br />
               {/* <label>Password</label>
@@ -91,7 +91,7 @@ const Card2 = (props) => {
                 placeholder="Password"
               ></input>{" "} */}
               <br />
-              {msg && <p style={{ color: "red" }}>OTP has been sent</p>}
+              {msg && <p style={{ color: "green" }}>OTP has been sent</p>}
               <br />
               <div
                 style={{ width: "45%", left: "34%", marginTop: "6px" }}

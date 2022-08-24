@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React,{useEffect} from 'react'
 import Card from '../Card/Card'
 import Card1 from '../Card/Card1'
 import CardPassenger from '../Card/CardPassenger'
@@ -13,11 +13,14 @@ const navigate = useNavigate();
 
     const [cookies, setCookie] = useCookies(['name']);
     console.log("cookies",cookies.logged_in);
-    if(cookies.logged_in === "true") {
+    useEffect(()=>{
+        if(cookies.logged_in === "true") {
+            console.log("User logged in")
+        }else{
+            navigate("/")
+        }
 
-    }else{
-        navigate("/")
-    }
+    } ,[])
     return (
         <body>
             <div id="main">
