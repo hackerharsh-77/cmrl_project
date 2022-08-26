@@ -6,7 +6,11 @@
     margin:6px;
     padding: 4px 4px;
 }
-
+.email-main2{
+  padding: 4px 4px;
+  margin:6px;
+  margin-bottom:-2rem;
+}
 .password{
     margin-left:8px;
 }
@@ -15,22 +19,22 @@
     margin-left:13px;
 }
 
-.email-main{
-    margin-top:20px;
-}
 
-.email-main2{
-    margin-bottom:-10px;
-    margin-left:10px;
-}
 
 .captcha-img{
     margin-top:1px;   
     width:35%;
 }
+.otp{
+    margin-top:-2rem; 
+    margin-left:5rem;
+
+}
 
 .submit{
-    margin-top:3px;
+    margin-top:-40px;
+    margin-left:9rem;
+
 }
 .justify-content-center label{
      font-weight: 600;
@@ -40,10 +44,14 @@
     width:500px;  
 }
 .send{
-    background-color: aliceblue;
+    /* background: aliceblue; */
+    margin-right: 6rem;
 }
 .verify{
     background-color: aliceblue;
+    margin-right:-3rem;
+    
+    
 }
 
 

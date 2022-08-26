@@ -10,7 +10,7 @@ const Card = () => {
             <div>
                 <div className="uk-card uk-card-default uk-card-hover uk-card-body p-5">
                     <label>Email</label>
-                    <input class="mobile" type="text" placeholder="Enter mobile number"></input><br/>
+                    <input class="mobile" type="text" placeholder="Enter email"></input><br/>
                     <label class="otp1">Password</label>
                     <input class="otp" type="text" placeholder="Enter the password"></input>
                     <Link to="/admin">

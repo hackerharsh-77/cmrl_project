@@ -78,6 +78,7 @@ const FeedbackStudent= ()=>{
                         </div>
                         <div class="gender bg-card">
                             <label className="b">How would you rate the teaching quality of the training?</label> <br />
+                            <div class="rate">
                             <h4>Poor</h4>
                             <input type="radio" class="size" name="long"></input><label>0</label>
                             <input type="radio" class="size" name="long"></input><label>1</label>
@@ -91,9 +92,11 @@ const FeedbackStudent= ()=>{
                             <input type="radio" class="size" name="long"></input><label>9</label>
                             <input type="radio" class="size" name="long"></input><label>10</label>
                             <h4>Excellent</h4>
+                            </div>
                         </div>
                         <div class="gender bg-card">
                             <label className="b">How would you rate the training session overall?</label> <br />
+                            <div class="rate">
                             <h4>Poor</h4>
                             <input type="radio" class="size" name="long"></input><label>0</label>
                             <input type="radio" class="size" name="long"></input><label>1</label>
@@ -107,6 +110,7 @@ const FeedbackStudent= ()=>{
                             <input type="radio" class="size" name="long"></input><label>9</label>
                             <input type="radio" class="size" name="long"></input><label>10</label>
                             <h4>Excellent</h4>
+                            </div>
                         </div>
                         <div class="input bg-card" >
                             <input type="textarea" class="size suggestion" placeholder="Training session key takeaways..."></input>

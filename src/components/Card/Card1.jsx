@@ -14,9 +14,9 @@ const Card = (props) => {
                     {/* <img class="qrcode" src = "https://cdn.mos.cms.futurecdn.net/QjVmxuEvLwV9rdr9yBB4Th.jpg" alt="not available" /> */}
                     <p class="msg">Login through your Mobile number or via username and password by selecing the option below.</p>
                     <div className="row">
-                        <div className="col-md-6 mobile_button">
+                        {/* <div className="col-md-6 mobile_button">
                             <Button onClick={()=>{props.toggleBool()}} variant="contained">Admin</Button>
-                        </div>
+                        </div> */}
                         <div className="col-md-6 username_button">
                             <Button onClick={()=>{props.toggleBool()}} variant="outlined">User</Button>
                         </div>

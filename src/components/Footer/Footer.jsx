@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css'
+import Button from '@mui/material/Button'
 
 
 const Footer = () => {
@@ -364,6 +365,9 @@ const Footer = () => {
           <a href="https://chennaimetrorail.org/privacy-policy/" title="Privacy Policy" className="snip-a">
             Privacy Policy
           </a>
+        </li>
+        <li>
+        <a href='#'>Admin</a>
         </li>
       </ul>
     </div>

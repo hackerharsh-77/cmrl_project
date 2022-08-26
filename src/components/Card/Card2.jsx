@@ -97,6 +97,7 @@ const Card2 = (props) => {
                 style={{ width: "45%", left: "34%", marginTop: "6px" }}
                 class="input-group d-flex justify-content-center"
               >
+              <div class="otp">
                 <input
                   type="text"
                   class="form-control"
@@ -107,6 +108,7 @@ const Card2 = (props) => {
                     setotp(e.target.value);
                   }}
                 />
+                </div>
                 <button
                   class="btn btn-outline-secondary send"
                   type="button"
