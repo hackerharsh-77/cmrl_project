@@ -37,6 +37,8 @@ mongoose.connect(`mongodb+srv://chennaimetro:${process.env.DB_PASSWORD}@cluster0
 //   console.log(err + ' : error connecting to cluster')
 // });
 
+app.use(cors())
+
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
